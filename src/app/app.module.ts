@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {AngularFontAwesomeModule } from 'angular-font-awesome';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HajjComponent } from './hajj/hajj.component';
 import { UmrahComponent } from './umrah/umrah.component';
 import { FuneralComponent } from './funeral/funeral.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,13 @@ import { FuneralComponent } from './funeral/funeral.component';
     ContactComponent,
     HajjComponent,
     UmrahComponent,
-    FuneralComponent
+    FuneralComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
