@@ -13,7 +13,7 @@ export class NavComponent implements OnInit {
 
   ngOnInit(): void {
     $(document).ready(() => {
-
+// --------------animation for the title-------------------------------
         $('#titleDiv').animate({
             opacity: 1
         },2000,function() {});
@@ -31,6 +31,16 @@ export class NavComponent implements OnInit {
         });
 
     });
+    // ----------------------animation for the drop dawn menu ---------------------
+    $('#menuButton').click(function() {
+      $('#menuButton').animate({ display: 'none'}, 1000, function(){});
+    });
+
+    $('button').click(function(){
+      $()
+      $('ul').animate({height: '350px'});
+    });
+
   }
 
 }
