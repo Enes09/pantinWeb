@@ -16,15 +16,15 @@ export class NavComponent implements OnInit {
 // --------------animation for the title-------------------------------
         $('#titleDiv').animate({
             opacity: 1
-        },2000,function() {});
+        }, 2000,function() {});
 
         setTimeout(function() {
             $('hr').addClass('grow')
         }, 1000);
 
         $(window).scroll(function() {
-            var nav = $('nav');
-            var scroll = $(window).scrollTop();
+            let nav = $('nav');
+            let scroll = $(window).scrollTop();
 
             if (scroll >= 100) nav.addClass('fixed'), nav.css("margin-top", 0), $('hr').removeClass('grow');
             else nav.removeClass('fixed'), nav.css("margin-top", 30), $('hr').addClass('grow');
@@ -32,15 +32,22 @@ export class NavComponent implements OnInit {
 
     });
     // ----------------------animation for the drop dawn menu ---------------------
+    let menuBooleran = false;
+
+    $('.menuLink').click(function() {
+      $('ul').animate({height: '0px'});
+      menuBooleran = false;
+    });
+
     $('#menuButton').click(function() {
-      $('#menuButton').animate({ display: 'none'}, 1000, function(){});
+      if (!menuBooleran) {
+        $('ul').animate({height: '350px'});
+        menuBooleran = true;
+    } else {
+      $('ul').animate({height: '0px'});
+      menuBooleran = false;
+      }
     });
-
-    $('button').click(function(){
-      $()
-      $('ul').animate({height: '350px'});
-    });
-
   }
 
 }
