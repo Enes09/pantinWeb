@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 declare var $: any;
 
@@ -9,7 +10,36 @@ declare var $: any;
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  componentTitle: any;
+  currentUrl: string;
+
+  constructor(private router: Router) {
+    this.router.events.subscribe((event) => { 
+      if (event instanceof NavigationEnd) {
+        this.currentUrl = event.url;
+        switch (this.currentUrl) {
+          case '/':
+            this.currentUrl = 'Accueil';
+            break;
+          case '/hajj':
+            this.currentUrl = 'Hajj';
+            break;
+          case '/umrah':
+            this.currentUrl = 'Omra';
+            break;
+          case '/funeral':
+            this.currentUrl = 'Fonds d\'obsèques';
+            break;
+          case '/contact':
+            this.currentUrl = 'Contact';
+            break;
+          default:
+            this.currentUrl = 'Introuvables';
+            break;
+        }
+      }
+    });
+  }
 
   ngOnInit(): void {
     $(document).ready(() => {
@@ -38,8 +68,12 @@ export class NavComponent implements OnInit {
       $('ul').animate({height: '0px'});
       menuBooleran = false;
     });
+    $(document).click(function() {
+      $('ul').animate({height: '0px'});
+      menuBooleran = false;
+    });
 
-    $('#menuButton').click(function() {
+    $('#menuButton').click(function(event) {
       if (!menuBooleran) {
         $('ul').animate({height: '350px'});
         menuBooleran = true;
@@ -47,6 +81,7 @@ export class NavComponent implements OnInit {
       $('ul').animate({height: '0px'});
       menuBooleran = false;
       }
+      event.stopPropagation();
     });
   }
 

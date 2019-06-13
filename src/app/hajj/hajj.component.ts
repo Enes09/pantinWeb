@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HajjComponent implements OnInit {
 
+  static componentTitle: 'Hajj';
+
   constructor() { }
 
   ngOnInit() {
