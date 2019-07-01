@@ -49,36 +49,37 @@ export class NavComponent implements OnInit {
         }, 2000,function() {});
 
         setTimeout(function() {
-            $('hr').addClass('grow')
+            $('.hr').addClass('grow')
         }, 1000);
 
         $(window).scroll(function() {
             let nav = $('nav');
             let scroll = $(window).scrollTop();
 
-            if (scroll >= 100) nav.addClass('fixed'),$('hr').removeClass('grow');
-            else nav.removeClass('fixed'),$('hr').addClass('grow');
+            if (scroll >= 100) nav.addClass('fixed'),$('.hr').removeClass('grow');
+            else nav.removeClass('fixed'),$('.hr').addClass('grow');
         });
 
     });
     // ----------------------animation for the drop dawn menu ---------------------
     let menuBooleran = false;
+    let isBigScreen = true; // if is big screen there is no animation for the menu list
 
     $('.menuLink').click(function() {
-      $('ul').animate({height: '0px'});
+      $('#menuList').animate({height: '0px'});
       menuBooleran = false;
     });
     $(document).click(function() {
-      $('ul').animate({height: '0px'});
+      $('#menuList').animate({height: '0px'});
       menuBooleran = false;
     });
 
     $('#menuButton').click(function(event) {
       if (!menuBooleran) {
-        $('ul').animate({height: '350px'});
+        $('#menuList').animate({height: '350px'});
         menuBooleran = true;
     } else {
-      $('ul').animate({height: '0px'});
+      $('#menuList').animate({height: '0px'});
       menuBooleran = false;
       }
       event.stopPropagation();

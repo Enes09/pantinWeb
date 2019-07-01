@@ -10,7 +10,76 @@ p{
 
 
 /* -------------------------------------- slider -----------------------------------------*/
+#slider {
+    width: 720px;
+    height: 400px;
+    overflow: hidden;
+}
 
-.test{
-    margin-top: 80px;
+#slider .slides {
+    display: block;
+    width: 6000px;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+}
+
+#slider .slide {
+    float: left;
+    list-style-type: none;
+    width: 720px;
+    height: 400px;
+}
+
+#sliderMainContainer{
+	width: 720px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.sliderButton{
+	position: absolute;
+
+	background: none;
+	color: #e6e6e6;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+#next{
+	right: 10px;
+	top: 40%;
+}
+
+#prev{
+	left: 10px;
+	top: 40%;
+}
+
+#navigationBar{
+	position: absolute;
+	bottom: 10px;
+	width: 50%;
+	height: 10px;
+	margin-left: 25%;
+}
+
+
+hr.sliderHr{
+	float: left;
+	width: 70px;
+	margin-left: 5px;
+}
+
+.slide{
+	
+	margin-left: auto;
+    margin-right: auto;
+  
 }
