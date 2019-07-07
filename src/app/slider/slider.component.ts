@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-declare var $: any;
-
-
+    declare var $: any;
     var startIsRunning = false;
     var leftIsRunning = false;
 
@@ -15,17 +13,23 @@ declare var $: any;
     var interval;
 
 @Component({
-  selector: 'app-umrah',
-  templateUrl: './umrah.component.html',
-  styleUrls: ['./umrah.component.scss']
+  selector: 'app-slider',
+  templateUrl: './slider.component.html',
+  styleUrls: ['./slider.component.scss']
 })
-export class UmrahComponent implements OnInit {
-  imagePath1: any = '../assets/img/mecca1.jpg';
-  imagePath2: any = '../assets/img/mecca2.jpg';
-  imagePath3: any = '../assets/img/mecca3.jpg';
-  imagePath4: any = '../assets/img/mecca4.jpg';
+export class SliderComponent implements OnInit {
+  
+
+  loadImages(image1, image2, image3, image4) {
+   let imagePath1: any = image1;
+   let imagePath2: any = image2;
+   let imagePath3: any = image3;
+   let imagePath4: any = image4;
+  }
+
 
   constructor() { }
+
   ngOnInit() {
     $(document).ready(() => {
 

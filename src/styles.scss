@@ -8,7 +8,6 @@ body{
 }
 
 article{
-    border-top: solid black 0.5px;
     font-family: 'Montserrat';
 }
 
@@ -17,11 +16,14 @@ article{
     color: white;
     background: #42b9f4;
     border-radius: 5%;
+    border: none;
     padding: 10px;
     font-family: 'Montserrat';
     font-weight: bold;
-    margin-left: 20px;
+    margin-left: 10%;
     cursor: pointer;
+    width: 80%;
+
 }
 
 .infoLink{
@@ -34,4 +36,22 @@ article{
     padding: 2px;
     font-size: 0.8em;
     cursor: pointer;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10px;
+}
+
+
+#bodyFooter{
+    background: #474747;
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 0.7em;
+    height: auto;
+    padding: 10px;
+    margin: 15px 0 0 0;
+
+    p{
+        margin: 10px 5px 10px 5px;
+    }
 }

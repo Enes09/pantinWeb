@@ -1,3 +1,47 @@
-<p>
-  umrah works! testultest
-</p>
+<div id="sliderMainContainer">
+    <div id="slider">
+        <ul class="slides"><!-- the number of slide here will automaticly setup the hr number bellow and the js -->
+            <li class="slide slide1"><img id="img1" class="slidesImg" [src]="imagePath1" /></li>
+            <li class="slide slide2"><img id="img2" class="slidesImg" [src]="imagePath2" /></li>
+            <li class="slide slide3"><img id="img3" class="slidesImg" [src]="imagePath3" /></li>
+            <li class="slide slide4"><img id="img4" class="slidesImg" [src]="imagePath4" /></li>
+        </ul>
+    </div>
+
+    <button class="sliderButton next" id="next"><i class="fas fa-chevron-circle-right fa-3x"></i></button>
+    <button class="sliderButton prev" id="prev" ><i class="fas fa-chevron-circle-left fa-3x"></i></button>
+
+    <div id="navigationBar">
+
+    </div>
+
+</div>
+
+<article class="omra" >
+    <h3>Qu’est-ce que La Omra ?</h3>
+    <p>
+    La Omrah siginife visiter. Une autre signification du mot Omrah est la visite
+    de la Kaa’ba avec ihram et faire le sa’y entre Safa et Marwa. Plus précisément la Omrah la visite     
+    de la Kaa’ba avec ihram et faire le sa’y sans un temps précis dans l’année à part les jours de Arafa et des
+    jours de l’Aîd du sacrifice (Udhiyye) c’est-à-dire pendant 5 jours. Puis faire couper ses cheveux (tahlik)
+    et rétrécir ses cheveux (taksir). 
+    Les obligations (farz) de la Omrah sont : *Ihram *Tawaf *
+    Les obligations (vacip) de la Omrah sont : *Sa’y *Faire couper les cheveux ou bien les rétrécir.
+    D’après les rites des écoles Hanafites et Malakites faire la Omrah une fois dans la vie est une Sunnah ; 
+    Tandis que dans les rites Safiites et Hanbelites c’est obligatoire (farz).
+    </p>
+
+    <p>
+    La limite de la Omrah (mikat) : *pour ceux qui viennent en dehors de La Mecque est
+    la même limite que cellke du Hajj. 		
+    *Pour ceux qui se trouvent dans la ville de Hil, la limite est la ville de Hill aussi. 			
+    *pour ceux qui viennent de La Mecque que ce soient des habitants de La Mecque ou bien 
+    des étrangers, la limite est la ville de Hil. Ces personnes, devraient sortir de La Mecque 
+    et mettre le ihram dans les villes de Ten’im, Hudeybiya ou Cirana.   
+    </p>
+        <br/>
+    <button class="infoLink">Plus d'informations <i class="fas fa-hand-point-right"></i></button>
+        <br/>
+</article>
+
+<button class="contactLink" routerLink="/contact">Contactez nous</button>

@@ -5,7 +5,7 @@ declare var $: any;
     var startIsRunning = false;
     var leftIsRunning = false;
 
-    //settings for slider
+    // settings for slider
     var width = 720;
     var animationSpeed = 500;
     var pause = 4000;
@@ -21,32 +21,54 @@ declare var $: any;
 })
 export class HajjComponent implements OnInit {
   static componentTitle: 'Hajj';
-  imagePathMecca1: any = '../assets/img/mecca1.jpg';
-  imagePathMecca2: any = '../assets/img/mecca2.jpg';
-  imagePathMecca3: any = '../assets/img/mecca3.jpg';
-  imagePathMecca4: any = '../assets/img/mecca4.jpg';
+  imagePath1: any = '../assets/img/mecca1.jpg';
+  imagePath2: any = '../assets/img/mecca2.jpg';
+  imagePath3: any = '../assets/img/mecca3.jpg';
+  imagePath4: any = '../assets/img/mecca4.jpg';
 
   constructor() {
    }
 
   ngOnInit() {
     $(document).ready(() => {
-        var $slider = $('#slider');
-        var $slideContainer = $('.slides', $slider);
-        var $slides = $('.slide', $slider);
 
-        function navigationBarAppend() {
+      var $slider = $('#slider');
+      var $slideContainer = $('.slides', $slider);
+      var $slides = $('.slide', $slider);
+
+      let isBigScreen = true;
+      let windowWidth = $(window).width();
+      if (windowWidth < 1024) {
+        isBigScreen = false;
+      }
+
+      if (!isBigScreen) {
+          width = windowWidth;
+          console.log("width: " + width);
+          $('#slider').css({ width: $(window).width() });
+          $('#slider .slide').css({ width: $(window).width()});
+          $('#sliderMainContainer').css({ width: $(window).width() });
+          $('.sliderHr').css({ width: '35px' });
+
+        }else{
+          width = 1000;
+          $('#slider').css({ width: '1000px', height: '600px' });
+          $('#slider .slide').css({ width: '1000px', height: '600px'});
+          $('#sliderMainContainer').css({ width: '1000px', height: '600px' });
+        }
+
+      function navigationBarAppend() {
 // tslint:disable-next-line: prefer-for-of
           for(let i=0; i < $slides.length; i++){
               $('#navigationBar').append('<hr class="sliderHr" style="'+ 
-              "float: left; width:70px; margin-left: 5px;"
+              "float: left; width:20%; margin-left: 5px;"
               +'">');
           }
       }
 
         navigationBarAppend();
 
-        function currentBarNav() {
+      function currentBarNav() {
 
           $('.sliderHr:nth-child('+ currentBar +')').css({ 
               "background": "#9b9b9b",
@@ -70,7 +92,7 @@ export class HajjComponent implements OnInit {
 
         currentBarNav();
 
-        function startSlider() {
+      function startSlider() {
         startIsRunning = true; // for th 2 fast click issue
 
         if (currentSlide === $slides.length) {
@@ -93,7 +115,7 @@ export class HajjComponent implements OnInit {
         setTimeout(function() {startIsRunning = false; }, 500); // for th 2 fast click issue
     }
 
-        function leftSldier() {
+      function leftSldier() {
             leftIsRunning = true; // for th 2 fast click issue
             if( currentSlide === 1) {
 
@@ -118,20 +140,20 @@ export class HajjComponent implements OnInit {
 
         interval = setInterval(startSlider, pause);
 
-        function allowFunctionStart() {
+      function allowFunctionStart() {
         if (!startIsRunning) {
             startSlider();
         }
     }
 
-        function allowFucntionLeft() {
+      function allowFucntionLeft() {
         if (!leftIsRunning) {
             leftSldier();
         }
     }
 
-        $('#next').click(allowFunctionStart);
-        $('#prev').click(allowFucntionLeft);
+      $('#next').click(allowFunctionStart);
+      $('#prev').click(allowFucntionLeft);
 
     });
   }

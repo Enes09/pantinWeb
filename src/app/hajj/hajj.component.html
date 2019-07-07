@@ -1,10 +1,10 @@
 <div id="sliderMainContainer">
             <div id="slider">
                 <ul class="slides"><!-- the number of slide here will automaticly setup the hr number bellow and the js -->
-                    <li class="slide slide1"><img [src]="imagePathMecca1" /></li>
-                    <li class="slide slide2"><img [src]="imagePathMecca2" /></li>
-                    <li class="slide slide3"><img [src]="imagePathMecca3" /></li>
-                    <li class="slide slide4"><img [src]="imagePathMecca4" /></li>
+                    <li class="slide slide1"><img id="img1" class="slidesImg" [src]="imagePath1" /></li>
+                    <li class="slide slide2"><img id="img2" class="slidesImg" [src]="imagePath2" /></li>
+                    <li class="slide slide3"><img id="img3" class="slidesImg" [src]="imagePath3" /></li>
+                    <li class="slide slide4"><img id="img4" class="slidesImg" [src]="imagePath4" /></li>
                 </ul>
             </div>
 
@@ -18,32 +18,28 @@
         </div>
 
 <article>
+    <h3 id="hajjTitleH3" >Qu’est-ce que le Hajj ?</h3>
 <p>
-  Hac Nedir ?
-
-Hac İslamın beş esasından biridir. Hem mali ve hemde bedeni bir ibadettir. 
-Hac, şartları kendisinde bulunan kişiye ömürde bir defa farzı ayındır. 
-Mali durumu müsait olduğu halde, ömrünün sonuna kadar sıhhati müsait olmazsa vekil gönderir. 
-Hac; lugatte tazim edilecek mekanları ziyaret kasdında bulunmaktır. İstilahda;</p>
+    Le Hajj est l'un des 5 piliers de l’Islam. C’est une pratique à la fois physique mais aussi matérielle.
+    Le culte du Hajj est obligatoire (Farz) pour chaque musulman au moins une fois dans leur vie. 
+    Si ses moyens financiers le permettent mais sa santé ne le permet pas, la personne peut envoyer
+    une autre personne par procuration à sa place. Le mot Hajj signifie respecter les lieux saints et
+    sacrés de l’Islam. Une autre signification du mot Hajj désigne plus précisément la visite de 
+    la Kaa’ba et des lieux saints pendant des moments précis (lors des mois de Hajj appelés Sevval, Zilkade et Zilhicce)
+    afin de pratiqué 
+  les cultes ordonnés de l’Islam (en respectant les farz, vacip et sunnah Du Hajj). 
+</p>
 
 <img id="hajjIstilahMeaning" src="assets/img/hajj.png" />
 
 <p>
-Hususi mekanı(Kabe-i muazzama ve civarındaki mukaddes mekanları) hususi zamanda(Hac ayları; 
-şevval, zilkade, zilhiccede), Hususi fiille (Hac menasiki; haccın farzları, vacipleri, 
-sünnetlerine riayetle) ziyaret etmektir. Peygamber efendimiz(S.A.V) buyurmuşlar ki; 
-İslam beş temel esas üzerine kurulmuştur. Bunlar Allah(c.c)’dan başka ilah olmadığına ve 
-Muhammed (sav)’in Allah’ın peygamberi olduğuna şehadet etmek, namaz kılmak, zekat vermek, 
-ramazan orucu tutmak ve Kabeyi haccetmek tir.
+    Notre Prophète (s.a.v) dit dans un hadtih : « L’islam est basé sur cinq piliers. 
+    Témoigner de l’Unicité d’Allah, témoigner que Muhammed Mustafa est son prophète ; 
+    faire les 5 prières par jour ;
+    donner l’aumône (la zakah) ; jeûner pendant le mois du Ramadan ; faire le Hajj »
 <br/>
-<a class="infoLink">Plus d'informations <i class="fas fa-hand-point-right"></i></a>
+<button class="infoLink">Plus d'informations <i class="fas fa-hand-point-right"></i></button>
 </p>
 </article>
 
-<br>
-<br>
-<br><br><br><br><br>
-<br><br><br><br><br>
-<br><br><br><br><br>
-<br><br><br><br><br>
-<a class="contactLink" routerLink="/contact">Contactez nous</a>
+<button class="contactLink" routerLink="/contact">Contactez nous</button>

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {AngularFontAwesomeModule } from 'angular-font-awesome';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,8 @@ import { HajjComponent } from './hajj/hajj.component';
 import { UmrahComponent } from './umrah/umrah.component';
 import { FuneralComponent } from './funeral/funeral.component';
 import { NavComponent } from './nav/nav.component';
+import { SliderComponent } from './slider/slider.component';
+import { SliderTestComponent } from './slider-test/slider-test.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +22,17 @@ import { NavComponent } from './nav/nav.component';
     HajjComponent,
     UmrahComponent,
     FuneralComponent,
-    NavComponent
+    NavComponent,
+    SliderComponent,
+    SliderTestComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFontAwesomeModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDGLt_g9gD4VA4-GTCEs29dHOEMcxBTGug'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
