@@ -1,3 +1,25 @@
+<form id="contactForm" [formGroup]="contactForm">
+
 <p>
-  contact works!
+  <label for="mail" >Votre mail :</label><br/>
+    <mat-form-field class="example-full-width">
+    <input matInput id="mail"  class="contactFormInput" type="text" formControlName="mail"/>
+  </mat-form-field>
+</p>
+
+<p>
+  <label for="subject">Sujet :</label><br/>
+  <input id="subject" class="contactFormInput" type="text" formControlName="subject"/>
+</p>
+
+<p>
+  <label for="message">Message :</label><br/>
+  <textarea id="message" formControlName="message"></textarea>
+</p>
+
+<button type="submit"  [disabled]="!contactForm.valid">Envoyer</button>
+</form>
+
+<p>
+      Value: {{ contactForm.value.mail }}
 </p>

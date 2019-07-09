@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {AngularFontAwesomeModule } from 'angular-font-awesome';
 import { AgmCoreModule } from '@agm/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,7 +33,8 @@ import { SliderTestComponent } from './slider-test/slider-test.component';
     AngularFontAwesomeModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDGLt_g9gD4VA4-GTCEs29dHOEMcxBTGug'
-    })
+    }),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
