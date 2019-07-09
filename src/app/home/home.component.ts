@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
       let isBigScreen = true;
       let welcomeTextAndMapContainerWidth = $('#welcomeTextAndMapContainer').width();
       const windowWidth = $(window).width();
-      if (windowWidth < 1024) {
+      if (windowWidth <= 1024) {
         isBigScreen = false;
       }
 
