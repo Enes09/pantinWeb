@@ -21,6 +21,8 @@ var startIsRunning = false;
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  imagePathToPaypalImg: any = '../assets/img/paypalTitle.png';
+
 
   lat = -23.8779431;
   lng = -49.8046873;

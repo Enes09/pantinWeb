@@ -56,8 +56,8 @@ export class NavComponent implements OnInit {
             let nav = $('nav');
             let scroll = $(window).scrollTop();
 
-            if (scroll >= 100) nav.addClass('fixed'),$('.hr').removeClass('grow'), $("#sliderMainContainer").css({ 'margin-top': "80px" });
-            else nav.removeClass('fixed'),$('.hr').addClass('grow'), $("#sliderMainContainer").css({ 'margin-top': 0 });
+            if (scroll >= 100) nav.addClass('fixed'),$('.hr').removeClass('grow'), $("#sliderMainContainer").css({ 'margin-top': "80px" }), $("#contactUs").css({ 'margin-top': "80px" });
+            else nav.removeClass('fixed'),$('.hr').addClass('grow'), $("#sliderMainContainer").css({ 'margin-top': 0 }), $("#contactUs").css({ 'margin-top': 0 });
         });
 
     });

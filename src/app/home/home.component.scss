@@ -17,6 +17,30 @@
     margin-right: 10px;*/
 }
 
+#paypalDiv{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-top: 15px;
+
+	#paypalLink{
+		font-family: 'Montserrat';
+		text-align: center;
+		color: black;
+		font-size: 1.3em;
+		background: rgb(255, 196, 57);
+		border-radius: 70px;
+		text-decoration: none;
+		padding: 5px;
+		
+
+		#paypalImg{
+			width: 80px;
+		}
+	}
+}
+
 /* -------------------------------------- slider -----------------------------------------*/
 #slider {
     width: 720px;
