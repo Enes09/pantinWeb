@@ -1,25 +1,41 @@
-<form id="contactForm" [formGroup]="contactForm">
+<h3 id="contactUs" >Contactez nous !</h3>
 
-<p>
-  <label for="mail" >Votre mail :</label><br/>
-    <mat-form-field class="example-full-width">
-    <input matInput id="mail"  class="contactFormInput" type="text" formControlName="mail"/>
-  </mat-form-field>
+<form id="contactForm" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+<p class="formPSection" id="mailPSection" >
+  <label for="mail" >*Mail :</label><br/>
+    <input 
+     id="mail"  
+     class="contactFormInput" 
+     type="email" 
+     formControlName="mail"
+     required>
 </p>
+<div class="alertForm" *ngIf="mail.invalid && (mail.dirty || mail.touched)" >
+    <i class="fas fa-info-circle"></i> Le mail est invalide
+</div>
 
-<p>
-  <label for="subject">Sujet :</label><br/>
-  <input id="subject" class="contactFormInput" type="text" formControlName="subject"/>
+<p class="formPSection" id="subjectPSection">
+  <label for="subject">*Sujet :</label><br/>
+  <input id="subject" class="contactFormInput" type="text" formControlName="subject" required/>
 </p>
+<div class="alertForm" *ngIf="subject.invalid && (subject.dirty || subject.touched)"> 
+    <i class="fas fa-info-circle"></i> Ce champ est obligatoire
+</div>
 
-<p>
-  <label for="message">Message :</label><br/>
-  <textarea id="message" formControlName="message"></textarea>
+
+<p class="formPSection" id="messagePSection" >
+  <label for="message">*Message :</label><br/>
+  <textarea id="message" formControlName="message" required></textarea>
 </p>
+<div class="alertForm" *ngIf="message.invalid && (message.dirty || message.touched)">
+    <i class="fas fa-info-circle"></i> Ce champ est obligatoire 
+</div>
 
-<button type="submit"  [disabled]="!contactForm.valid">Envoyer</button>
+<button *ngIf="contactForm.valid" id="contactFormSubmit" type="submit" [disabled]="!contactForm.valid">Envoyer</button>
 </form>
 
-<p>
-      Value: {{ contactForm.value.mail }}
-</p>
+
+
+
+
