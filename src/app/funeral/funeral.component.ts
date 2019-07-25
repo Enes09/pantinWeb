@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./funeral.component.scss']
 })
 export class FuneralComponent implements OnInit {
+  imagePathFuneral: any = '../assets/img/exemple-ou-example.png';
 
   constructor() { }
 

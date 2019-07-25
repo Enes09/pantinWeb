@@ -1,6 +1,7 @@
 .omra{
 	margin: 20px;
 	text-align: justify;
+	font-family: 'Montserrat';
 }
 
 //-------------------- slider ----------------------------------------
@@ -79,4 +80,15 @@ hr.sliderHr{
 .slidesImg{
 	width: 100%;
   	height: auto;
+}
+
+@media screen and (min-width: 1024px) { 
+	.omra{
+		width: 60%;
+		margin: 0 auto 20px auto;
+	}
+
+	.contactLinkOmra{
+		font-size: 2em;
+	}
 }

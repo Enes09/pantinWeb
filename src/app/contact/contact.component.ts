@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { ActivatedRoute, Routes  } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -14,17 +13,15 @@ export class ContactComponent implements OnInit {
   'Votre message n\'a pas pu être envoyer.'
   ];
 
-  subjectValue = '';
 
-  constructor(private route: ActivatedRoute) {
-    this.subjectValue = this.route.snapshot.params['subject'];
+  constructor() {
    }
 
 
 
   contactForm = new FormGroup({
     mail: new FormControl('', Validators.compose( [ Validators.email] )),
-    subject: new FormControl(this.subjectValue, Validators.compose( [Validators.max(50), Validators.required] )),
+    subject: new FormControl('', Validators.compose( [Validators.max(50), Validators.required] )),
     message: new FormControl('', Validators.compose( [Validators.max(1000), Validators.required] ))
   });
 
@@ -33,7 +30,6 @@ export class ContactComponent implements OnInit {
   get message(): any { return this.contactForm.get('message'); }
 
   ngOnInit() {
-    
   }
 
   onSubmit() {

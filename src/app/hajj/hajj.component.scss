@@ -1,4 +1,4 @@
-p{
+#hajjP{
     text-align: justify;
     margin: 20px;
 }
@@ -87,4 +87,15 @@ hr.sliderHr{
 .slidesImg{
 	width: 100%;
   	height: auto;
+}
+
+@media screen and (min-width: 1024px) { 
+	#hajjArticle{
+		width: 60%;
+		margin: 0 auto 20px auto;
+	}
+
+	.contactLinkHajj{
+		font-size: 2em;
+	}
 }
